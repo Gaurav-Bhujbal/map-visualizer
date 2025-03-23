@@ -1,0 +1,16 @@
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "username": "Gaurav",
+  "password": "Gaurav@123"
+}
+### 
+GET http://localhost:3000/api/dashboard
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHYXVyYXYiLCJpYXQiOjE3NDI3MTU2NzB9.e9dAFo8Cdu9gbzxbSlAEv0DlVUfkr4pSIK6zqAHyOlY
+Context-Type : application/json
+
+###
+GET http://localhost:3000/api/map
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHYXVyYXYiLCJpYXQiOjE3NDI3MTU2NzB9.e9dAFo8Cdu9gbzxbSlAEv0DlVUfkr4pSIK6zqAHyOlY
+Context-Type : application/json
