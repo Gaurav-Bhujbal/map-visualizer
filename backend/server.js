@@ -13,23 +13,11 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-let db = null;
-const dbPath = path.join(__dirname, "database.db");
-const initializeDbandServer = async () => {
-  try {
-    db = await open({
-      filename: dbPath,
-      driver: sqlite3.Database,
-    });
-    app.listen(3000, () => {
-      console.log(`Server running on port ${port}`);
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
+//Starting a server
 
-initializeDbandServer();
+app.listen(3000, () => {
+  console.log(`Server running on port 3000`);
+});
 
 //middleware to authenticate user
 
@@ -57,22 +45,39 @@ const authenticateUser = (request, response, next) => {
 
 //LOGIN API
 
+//Insted of DATABASE we are using Array for demo users
+
+const usersData = [
+  {
+    id: 1,
+    username: "Gaurav",
+    hashedPassword:
+      "$2b$10$8etRdJCTHRipn4aNeWRrz.cSl3peyUXjjwIQQU5KepnkFCo3cyb.K",
+  },
+  {
+    id: 2,
+    username: "Rahul",
+    hashedPassword:
+      "$2b$10$gAGISlmVIJngXv0AmRpFVeuGbIirH66uuDEsnPEQ8GeORjVkr3oM6",
+  },
+];
+
 app.post("/api/login", async (request, response) => {
   const { username, password } = request.body;
-  const dbResponse = await db.get(`
-            SELECT * FROM users WHERE username = '${username}'
-        ;`);
-  if (dbResponse === undefined) {
+
+  const user = usersData.filter((each) => each.username === username);
+
+  if (user === undefined) {
     response.status(401);
     return response.send({ error: "Invalid Username" });
   }
 
-  const isMatch = await bcrypt.compare(password, dbResponse.password);
+  const isMatch = await bcrypt.compare(password, user[0].hashedPassword);
   if (!isMatch) return response.status(401).json({ error: "Invalid Password" });
 
   const payload = {
-    id: dbResponse.id,
-    username: dbResponse.username,
+    id: user[0].id,
+    username: user[0].username,
   };
   const jwtToken = jwt.sign(payload, "SECRET_KEY");
   response.send({ jwt_token: jwtToken });
