@@ -65,4 +65,4 @@ npm start
 ```
 
 ### 4. Frontend deployment link
-Link: map-visualize.netlify.app
+##Link: https://map-visualize.netlify.app/login
