@@ -6,8 +6,8 @@ This project is a React application that integrates a map using an open-source l
 ## Features
 - **User Authentication**: JWT-based login system
 - **Dashboard**: Displays card components
-- **Map Integration**: Uses Leaflet/OpenLayers to show the map of India
+- **Map Integration**: Uses Leaflet to show the map of India
 - **Protected Routes**: Restricts access to authenticated users
 - **Routing**: React Router for navigation
-- **API Requests**: Axios/Fetch for backend communication
-- **Responsive UI**: Styled using Material UI/Bootstrap
+- **API Requests**: Fetch for backend communication
+- **Responsive UI**: CSS media features
