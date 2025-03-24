@@ -64,7 +64,7 @@ app.post("/api/login", async (request, response) => {
 
   const user = usersData.filter((each) => each.username === username);
 
-  if (user === undefined)
+  if (user.length === 0)
     return response.status(401).json({ error: "Invalid Username" });
 
   const isMatch = await bcrypt.compare(password, user[0].hashedPassword);
