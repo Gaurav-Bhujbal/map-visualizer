@@ -31,3 +31,13 @@ This project is a React application that integrates a map using an open-source l
 git clone https://github.com/Gaurav-Bhujbal/map-visualizer.git
 cd map-visualizer
 ```
+
+### 3. Start the Backend
+The backend is deployed on **Render**.
+**Backend URL:** "https://map-visualizer.onrender.com"
+
+To run a local backend:
+```sh
+cd backend
+npm install
+node server.js
