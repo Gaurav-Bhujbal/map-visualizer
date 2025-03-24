@@ -86,28 +86,28 @@ const dashboardData = [
     location: "New Delhi",
     lat: 28.6139,
     lng: 77.209,
-    img: "https://source.unsplash.com/400x300/?newdelhi",
+    img: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVsaGl8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 2,
     location: "Mumbai",
     lat: 19.076,
     lng: 72.8777,
-    img: "https://source.unsplash.com/400x300/?mumbai",
+    img: "https://s7ap1.scene7.com/is/image/incredibleindia/marine-drive-mumbai-maharashtra-1-attr-nearby?qlt=82&ts=1727355144712",
   },
   {
     id: 3,
     location: "Bangalore",
     lat: 12.9716,
     lng: 77.5946,
-    img: "https://source.unsplash.com/400x300/?bangalore",
+    img: "https://www.vacationindia.com/wp-content/uploads/2020/10/a-majestic-view-of-a-grand-flyover-situated-in-bangalore.jpg",
   },
   {
     id: 4,
     location: "Chennai",
     lat: 13.0827,
     lng: 80.2707,
-    img: "https://source.unsplash.com/400x300/?chennai",
+    img: "https://chennaimetrorail.org/wp-content/uploads/2024/03/cmrl-banner.jpg",
   },
 ];
 

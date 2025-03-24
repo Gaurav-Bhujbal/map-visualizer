@@ -1,8 +1,11 @@
 import "./index.css";
 import { useState } from "react";
 import Cookies from "js-cookie";
+import { useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
@@ -34,11 +37,20 @@ const Login = () => {
       const jwtToken = data.jwt_token;
       Cookies.set("jwt_token", jwtToken);
       setErrorMsg("");
+
+      //replacing path
+
+      navigate("/", { replace: true });
     } else {
       const { error } = data;
       setErrorMsg(error);
     }
   };
+
+  const jwtToken = Cookies.get("jwt_token");
+  if (jwtToken !== undefined) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className="login-bg-container">
