@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const path = require("path");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -65,10 +64,8 @@ app.post("/api/login", async (request, response) => {
 
   const user = usersData.filter((each) => each.username === username);
 
-  if (user === undefined) {
-    response.status(401);
-    return response.send({ error: "Invalid Username" });
-  }
+  if (user === undefined)
+    return response.status(401).json({ error: "Invalid Username" });
 
   const isMatch = await bcrypt.compare(password, user[0].hashedPassword);
   if (!isMatch) return response.status(401).json({ error: "Invalid Password" });
