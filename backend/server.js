@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const port = 3000;
 
 //middleware
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: ["http://localhost:3000", "https://map-visualize.netlify.app"] }));
 app.use(express.json());
 
 //Starting a server
