@@ -11,6 +11,6 @@ Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbW
 Context-Type : application/json
 
 ###
-GET http://localhost:3000/api/map
+GET http://localhost:3000/api/map/4
 Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHYXVyYXYiLCJpYXQiOjE3NDI3MTU2NzB9.e9dAFo8Cdu9gbzxbSlAEv0DlVUfkr4pSIK6zqAHyOlY
 Context-Type : application/json

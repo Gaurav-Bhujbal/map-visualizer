@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/login" Component={Login} />
         <Route path="/" Component={Dashboard} />
-        <Route path="/map" Component={MapView} />
+        <Route path="/map-view/:id" Component={MapView} />
       </Routes>
     </BrowserRouter>
   );

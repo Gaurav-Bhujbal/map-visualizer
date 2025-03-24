@@ -51,7 +51,7 @@ const Dashboard = () => {
         return (
           <ul className="card-container">
             {dashboardData.map((data) => (
-              <DashboardCard cardData={data} />
+              <DashboardCard key={data.id} cardData={data} />
             ))}
           </ul>
         );

@@ -124,6 +124,10 @@ const mapData = [
   { id: 4, location: "Chennai", lat: 13.0827, lng: 80.2707, zoom: 5 },
 ];
 
-app.get("/api/map", authenticateUser, (request, response) => {
-  response.send({ mapData });
+app.get("/api/map/:id", authenticateUser, (request, response) => {
+  let { id } = request.params;
+  id = parseInt(id);
+
+  const locationData = mapData.filter((each) => each.id === id);
+  response.send(locationData[0]);
 });

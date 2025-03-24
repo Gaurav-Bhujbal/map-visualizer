@@ -1,0 +1,29 @@
+.map-view-bg-container {
+  height: 100vh;
+  background-image: url("https://pagedone.io/asset/uploads/1702362010.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-view-body{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:768px){
+    .map-view-body{
+        width: 80%;
+    }
+}
+.leaflet-container {
+    height: 400px;
+    width: 100%;
+  }
+  .location-text-conatiner{
+    height: 20%;
+  }
