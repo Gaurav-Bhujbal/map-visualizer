@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const port = 3000;
 
 //middleware
-app.use(cors());
+app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 
 //Starting a server
