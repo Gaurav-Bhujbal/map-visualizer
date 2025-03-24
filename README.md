@@ -23,3 +23,11 @@ This project is a React application that integrates a map using an open-source l
 - Node.js
 - Express.js
 - JWT Authentication
+
+- ## Setup Instructions
+
+### 1. Clone the Repository
+```sh
+git clone https://github.com/Gaurav-Bhujbal/map-visualizer.git
+cd map-visualizer
+```
