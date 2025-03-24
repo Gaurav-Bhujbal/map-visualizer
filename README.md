@@ -48,3 +48,9 @@ You can test these APIs using **Postman**:
 ### Test Login Credentials:
 - **Username:** `Gaurav`, **Password:** `Gaurav@123`
 - **Username:** `Rahul`, **Password:** `Rahul@123`
+
+### 4. Start the Frontend
+cd frontend
+npm insatll
+npm start
+```
