@@ -63,3 +63,6 @@ Start the development server:
 ```sh
 npm start
 ```
+
+### 4. Frontend deployment link
+Link: map-visualize.netlify.app
