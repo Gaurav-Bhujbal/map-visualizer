@@ -55,6 +55,9 @@ const Dashboard = () => {
             ))}
           </ul>
         );
+        break;
+      default:
+        return null;
     }
   };
 
