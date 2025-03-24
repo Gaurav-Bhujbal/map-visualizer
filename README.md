@@ -41,3 +41,10 @@ To run a local backend:
 cd backend
 npm install
 node server.js
+
+## Testing with Postman
+You can test these APIs using **Postman**:
+
+### Test Login Credentials:
+- **Username:** `Gaurav`, **Password:** `Gaurav@123`
+- **Username:** `Rahul`, **Password:** `Rahul@123`
