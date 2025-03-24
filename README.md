@@ -16,8 +16,8 @@ This project is a React application that integrates a map using an open-source l
 ### Frontend:
 - React.js
 - React Router
-- Axios/Fetch
-- Material UI/Bootstrap
+- Fetch
+- CSS media features
 
 ### Backend:
 - Node.js
